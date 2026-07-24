@@ -5,7 +5,7 @@
 **40+ production-ready AI skill packs for Claude Code, Cursor, Codex, Gemini CLI & any LLM agent**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/DangQuangSE/team-development-skills?style=social)](https://github.com/DangQuangSE/team-development-skills/stargazers)
+[![Stars](https://img.shields.io/github/stars/huuanh20/awesome-ai-agent-skills?style=social)](https://github.com/huuanh20/awesome-ai-agent-skills/stargazers)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blueviolet)](https://claude.ai)
 [![Cursor](https://img.shields.io/badge/Cursor-34%20skills-blue)](https://cursor.sh)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-compatible-orange)](https://ai.google.dev)
@@ -188,7 +188,7 @@ If this project helps you, please **give it a star** ⭐ — it helps others dis
 
 ## 📄 License
 
-MIT © [DangQuangSE](https://github.com/DangQuangSE)
+MIT © [huuanh20](https://github.com/huuanh20)
 
 ---
 
