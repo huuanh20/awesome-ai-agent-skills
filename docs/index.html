@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesome AI Agent Skills — 40+ AI Skill Packs for Cursor, Claude & More</title>
+  <meta name="description" content="40+ production-ready AI skill packs for Claude Code, Cursor, Codex, Gemini CLI. Simulate a full software dev team with AI. Free & open source." />
+  <meta property="og:title" content="Awesome AI Agent Skills" />
+  <meta property="og:description" content="40+ AI skill packs for Claude Code, Cursor, Gemini CLI & any LLM agent. Simulate a full dev team with AI." />
+  <meta property="og:image" content="https://huuanh20.github.io/awesome-ai-agent-skills/hero-bg.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #080c14;
+      --bg2: #0d1320;
+      --blue: #4f8ef7;
+      --purple: #a855f7;
+      --cyan: #06b6d4;
+      --green: #10b981;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --border: rgba(255,255,255,0.08);
+      --card: rgba(255,255,255,0.04);
+      --glow: rgba(79,142,247,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(8,12,20,0.8);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--blue); }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: white; border: none; padding: 0.5rem 1.25rem;
+      border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+      cursor: pointer; text-decoration: none; transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('hero-bg.png') center/cover no-repeat;
+      opacity: 0.25; z-index: 0;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(79,142,247,0.12) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 900px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(79,142,247,0.1); border: 1px solid rgba(79,142,247,0.3);
+      color: var(--blue); padding: 0.35rem 1rem;
+      border-radius: 999px; font-size: 0.85rem; font-weight: 500;
+      margin-bottom: 1.5rem; animation: fadeInDown 0.6s ease;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900; line-height: 1.1;
+      background: linear-gradient(135deg, #fff 0%, var(--blue) 50%, var(--purple) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem; animation: fadeInUp 0.6s ease 0.1s both;
+    }
+    .hero p {
+      font-size: 1.2rem; color: var(--muted); max-width: 620px;
+      margin: 0 auto 2.5rem; animation: fadeInUp 0.6s ease 0.2s both;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: white; padding: 0.9rem 2rem; border-radius: 12px;
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(79,142,247,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,142,247,0.4); }
+    .btn-secondary {
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); padding: 0.9rem 2rem; border-radius: 12px;
+      font-weight: 600; font-size: 1rem; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+    /* AGENTS STRIP */
+    .agents-strip {
+      padding: 2rem; text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .agents-strip p { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+    .agents-list { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .agent-tag {
+      display: flex; align-items: center; gap: 0.4rem;
+      background: var(--card); border: 1px solid var(--border);
+      padding: 0.4rem 1rem; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 500; color: var(--text);
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+
+    h2 {
+      font-size: 2.2rem; font-weight: 800; text-align: center;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #fff, var(--muted));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .section-sub { text-align: center; color: var(--muted); margin-bottom: 3rem; font-size: 1.05rem; }
+
+    /* PACKS GRID */
+    .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .pack-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .pack-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .pack-card:hover { border-color: rgba(79,142,247,0.3); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(79,142,247,0.1); }
+    .pack-card:hover::before { opacity: 1; }
+    .pack-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .pack-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pack-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .pack-commands { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .cmd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem; background: rgba(79,142,247,0.1);
+      border: 1px solid rgba(79,142,247,0.2); color: var(--blue);
+      padding: 0.2rem 0.6rem; border-radius: 6px;
+    }
+
+    /* WORKFLOW */
+    .workflow {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 3rem; text-align: center;
+    }
+    .flow-steps {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;
+    }
+    .flow-step {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 0.6rem 1.2rem; border-radius: 10px;
+      font-weight: 600; font-size: 0.9rem;
+    }
+    .flow-arrow { color: var(--blue); font-size: 1.2rem; }
+
+    /* STATS */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+    .stat-card {
+      text-align: center; background: var(--card);
+      border: 1px solid var(--border); border-radius: 16px; padding: 2rem 1rem;
+    }
+    .stat-number { font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, var(--blue), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-label { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+
+    /* CTA */
+    .cta-section {
+      text-align: center; padding: 5rem 2rem;
+      background: linear-gradient(135deg, rgba(79,142,247,0.05), rgba(168,85,247,0.05));
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .cta-section p { color: var(--muted); margin-bottom: 2rem; font-size: 1.1rem; }
+
+    /* FOOTER */
+    footer {
+      text-align: center; padding: 2rem;
+      color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">🤖 AI Agent Skills</div>
+    <div class="nav-links">
+      <a href="#packs">Skill Packs</a>
+      <a href="#workflow">Workflow</a>
+      <a href="https://github.com/huuanh20/awesome-ai-agent-skills">GitHub</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/huuanh20/awesome-ai-agent-skills" target="_blank">⭐ Star on GitHub</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ 40+ Production-Ready AI Skills</div>
+      <h1>Awesome AI<br/>Agent Skills</h1>
+      <p>Stop writing the same prompts over and over. Use battle-tested skill packs that make your AI agent work like a real software development team.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://github.com/huuanh20/awesome-ai-agent-skills" target="_blank">⭐ Star on GitHub</a>
+        <a class="btn-secondary" href="https://github.com/huuanh20/awesome-ai-agent-skills#-quick-start" target="_blank">📦 Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS STRIP -->
+  <div class="agents-strip">
+    <p>Compatible with your favorite AI coding agent</p>
+    <div class="agents-list">
+      <div class="agent-tag">🟣 Claude Code</div>
+      <div class="agent-tag">🔵 Cursor</div>
+      <div class="agent-tag">🟠 Gemini CLI</div>
+      <div class="agent-tag">🤖 GitHub Copilot</div>
+      <div class="agent-tag">⚡ Codex</div>
+      <div class="agent-tag">🌐 Any LLM</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">AI Skill Packs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Major Bundles</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">7</div>
+        <div class="stat-label">AI Team Roles</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">AI Agents Supported</div>
+      </div>
+    </div>
+
+    <!-- PACKS -->
+    <h2 id="packs">Skill Packs</h2>
+    <p class="section-sub">Use independently or chain them into a full end-to-end pipeline</p>
+    <div class="packs-grid">
+      <div class="pack-card">
+        <div class="pack-icon">🛠️</div>
+        <h3>Development Skills</h3>
+        <p>A complete development lifecycle toolkit. Plan, implement, debug, test, review — all with a single command.</p>
+        <div class="pack-commands">
+          <span class="cmd">/plan</span>
+          <span class="cmd">/cook</span>
+          <span class="cmd">/fix</span>
+          <span class="cmd">/test</span>
+          <span class="cmd">/quality</span>
+          <span class="cmd">/review</span>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-icon">📋</div>
+        <h3>SRS Skills</h3>
+        <p>Turns any idea into a complete IEEE 830-1998 Software Requirements Specification through a 7-step automated pipeline.</p>
+        <div class="pack-commands">
+          <span class="cmd">/cl:srs</span>
+          <span class="cmd">/cl:srs-flow</span>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-icon">👥</div>
+        <h3>Virtual Team Skill</h3>
+        <p>Simulate a full 7-role AI development team. From Business Analyst to QA/QC — all automated.</p>
+        <div class="pack-commands">
+          <span class="cmd">/team</span>
+          <span class="cmd">/team-ba</span>
+          <span class="cmd">/team-techlead</span>
+          <span class="cmd">/team-pm</span>
+          <span class="cmd">/team-be</span>
+          <span class="cmd">/team-fe</span>
+          <span class="cmd">/team-qa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section id="workflow" style="padding-top: 0;">
+    <div class="workflow">
+      <h2 style="text-align:center; -webkit-text-fill-color: var(--text);">Recommended Workflow</h2>
+      <p style="color: var(--muted); text-align:center; margin-top: 0.5rem;">Chain all three packs for a complete delivery pipeline</p>
+      <div class="flow-steps">
+        <div class="flow-step">💡 Your Idea</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">📋 SRS Skills</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">👥 Virtual Team</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">🛠️ Dev Skills</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">🚀 Shipped!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Ready to supercharge your AI agent?</h2>
+    <p>Free, open source, and works with your existing tools.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a class="btn-primary" href="https://github.com/huuanh20/awesome-ai-agent-skills" target="_blank">⭐ Star on GitHub — It's Free!</a>
+      <a class="btn-secondary" href="https://github.com/huuanh20/awesome-ai-agent-skills/releases" target="_blank">📦 View Releases</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with ❤️ by <a href="https://github.com/huuanh20">huuanh20</a> · 
+    <a href="https://github.com/huuanh20/awesome-ai-agent-skills">GitHub</a> · 
+    MIT License</p>
+  </footer>
+
+</body>
+</html>
