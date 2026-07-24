@@ -52,7 +52,7 @@ Three packs — use independently or chain them into a full end-to-end pipeline.
 Just clone into your project root — Cursor auto-discovers **34 skills** from `.cursor/skills/`:
 
 ```bash
-git clone https://github.com/DangQuangSE/team-development-skills.git awesome-ai-agent-skills
+git clone https://github.com/huuanh20/awesome-ai-agent-skills.git awesome-ai-agent-skills
 cp -r awesome-ai-agent-skills/.cursor .cursor
 ```
 
