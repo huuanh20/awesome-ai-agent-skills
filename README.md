@@ -2,6 +2,9 @@
 
 <div align="center">
 
+<img src="./assets/banner.png" alt="Awesome AI Agent Skills Banner" width="100%"/>
+
+
 **40+ production-ready AI skill packs for Claude Code, Cursor, Codex, Gemini CLI & any LLM agent**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
