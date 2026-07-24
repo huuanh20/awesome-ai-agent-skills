@@ -14,6 +14,21 @@
 
 [📦 Get Started](#-quick-start) · [📖 Skills Overview](#-skills-overview) · [🤝 Contributing](#-contributing)
 
+<br/>
+
+🌍 **Translate this page:**
+[🇻🇳 Tiếng Việt](https://translate.google.com/translate?sl=en&tl=vi&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇨🇳 中文](https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇯🇵 日本語](https://translate.google.com/translate?sl=en&tl=ja&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇰🇷 한국어](https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇪🇸 Español](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇫🇷 Français](https://translate.google.com/translate?sl=en&tl=fr&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇩🇪 Deutsch](https://translate.google.com/translate?sl=en&tl=de&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇧🇷 Português](https://translate.google.com/translate?sl=en&tl=pt&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇷🇺 Русский](https://translate.google.com/translate?sl=en&tl=ru&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/huuanh20/awesome-ai-agent-skills) ·
+[🌐 More languages →](https://translate.google.com/translate?sl=en&u=https://github.com/huuanh20/awesome-ai-agent-skills)
+
 </div>
 
 ---
