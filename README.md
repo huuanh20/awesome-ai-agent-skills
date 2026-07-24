@@ -14,6 +14,7 @@
 [![Cursor](https://img.shields.io/badge/Cursor-34%20skills-blue)](https://cursor.sh)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-compatible-orange)](https://ai.google.dev)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/huuanh20/awesome-ai-agent-skills/blob/main/CONTRIBUTING.md)
+[![Built with AI](https://img.shields.io/badge/Built%20with-Gemini%20%26%20Claude-ff6b6b?logo=google&logoColor=white)](https://github.com/huuanh20/awesome-ai-agent-skills)
 
 *Stop writing the same prompts over and over. Use battle-tested AI agent skills that simulate a real software development team.*
 
