@@ -9,9 +9,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/huuanh20/awesome-ai-agent-skills?style=social)](https://github.com/huuanh20/awesome-ai-agent-skills/stargazers)
+[![Website](https://img.shields.io/badge/🌐_Website-Live-brightgreen)](https://huuanh20.github.io/awesome-ai-agent-skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blueviolet)](https://claude.ai)
 [![Cursor](https://img.shields.io/badge/Cursor-34%20skills-blue)](https://cursor.sh)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-compatible-orange)](https://ai.google.dev)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/huuanh20/awesome-ai-agent-skills/blob/main/CONTRIBUTING.md)
 
 *Stop writing the same prompts over and over. Use battle-tested AI agent skills that simulate a real software development team.*
 
